@@ -79,8 +79,6 @@ function computeNextState(currentState) {
 }
 
 function displayState(state) {
-    const board = $("#board");
-
     state.forEach((row, y) => {
         row.forEach((squareStatus, x) => {
             if (squareStatus) {
@@ -95,7 +93,7 @@ function displayState(state) {
 }
 
 function getSquare(x, y) {
-    return board
+    return $("#board")
             .children().eq(y)
             .children().eq(x);
 }
